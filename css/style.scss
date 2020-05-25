@@ -1,0 +1,306 @@
+@import "https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap";
+@import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap";
+@import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
+@import "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css";
+@import "owl.carousel.min.css";
+@import "owl.theme.default.min.css";
+@import "bootstrap.min.css";
+@import "bootstrap-theme.css";
+
+/* ====================================
+      Color
+==================================== */
+$white_color: #ffffff;
+$aqua_color: #49cbcd;
+$dark_grey: #484c55;
+$light_grey: #f8f9fb;
+$blue_color: #1b6d85;
+$dark_color: #4e525d;
+
+/* ====================================
+  Font-family
+==================================== */
+$main_font: 'Open Sans', sans-serif;
+
+
+/* ====================================
+  Font-weight
+==================================== */
+$font_weight_3: 300;
+$font_weight_4: 400;
+$font_weight_6: 600;
+
+/* ====================================
+  Font-size
+==================================== */
+$font_size_h1: 80px;
+$font_size_h2: 44px;
+$font_size_h3: 13px;
+$font_size_p: 18px;
+$font_size_span: 21px;
+
+
+@mixin max-screen($number) {
+  @media screen and (max-width: $number) {
+    @content;
+  }
+}
+
+header{
+  background-image: url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 300px;
+  .navbar-default{
+    border-color: transparent;
+    box-shadow: none;
+    border: none;
+    background-image: none;
+    border-radius: 0;
+    background-color: transparent;
+    .navbar-brand{
+      padding-top: 30px;
+    }
+  }
+  h1{
+    padding-top: 140px;
+    padding-bottom: 22px;
+    font-size: 77px;
+    color: #4d4d4d;
+    font-family: 'Asap', sans-serif;
+    margin: 0;
+  }
+  .navbar-nav>li {
+    padding: 30px 0;
+    position: relative;
+    @include max-screen(767px){
+      padding: 15px 0px;
+    }
+    a{
+      color: #4d4d4d;
+      font-size: 16px;
+      position: relative;
+      margin: 10px 15px;
+      padding: 0;
+      &:after{
+        content: "";
+        display: block;
+        width: 0;
+        height: 3px;
+        background-color: #878787;
+        position: absolute;
+        bottom: -10px;
+        transition: 0.5s;
+      }
+    }
+    &:hover a:after{
+      width: 100%;
+    }
+  }
+  h2{
+    padding-bottom: 50px;
+    font-size: 22px;
+    font-family: 'Asap', sans-serif;
+    color: #4d4d4d;
+    margin: 0;
+  }
+  .row{
+    a{
+      text-decoration: none;
+      color: #4d4d4d;
+      font-size: 16px;
+      text-align: center;
+      display: inline-block;
+      width: 160px;
+      line-height: 50px;
+      text-transform: uppercase;
+      border: 1px solid #4d4d4d;
+      cursor: pointer;
+      transition: 0.5s;
+      font-family: 'Asap', sans-serif;
+      font-weight: 500;
+      margin: 0 20px 0 0;
+      &:hover{
+        background-color: #FFFFFF;
+        border: transparent;
+        -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
+        box-shadow: 0 0 5px 1px #4d4d4d;
+      }
+    }
+  }
+}
+.section_about{
+  padding-top: 110px;
+  padding-bottom: 120px;
+  h2{
+    color: #4d4d4d;
+    font-size: 46px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    padding-top: 50px;
+    &:before{
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #7a7a7a;
+      display: block;
+      margin-bottom: 19px;
+    }
+  }
+  p{
+    color: #4d4d4d;
+    font-size: 16px;
+    line-height: 25px;
+    padding-bottom: 40px;
+  }
+  a{
+    text-decoration: none;
+    color: #4d4d4d;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    width: 245px;
+    line-height: 50px;
+    text-transform: uppercase;
+    border: 1px solid #4d4d4d;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    padding: 0 47px;
+    &:hover{
+      background-color: #FFFFFF;
+      border: transparent;
+      -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
+      box-shadow: 0 0 5px 1px #4d4d4d;
+    }
+  }
+  img{
+    width: 100%;
+  }
+}
+.service {
+  background-color: #f6f6f6;
+
+  h2 {
+    color: #4d4d4d;
+    font-size: 46px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    padding-top: 140px;
+    padding-bottom: 64px;
+
+    &:before {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #7a7a7a;
+      display: block;
+      margin: auto;
+      margin-bottom: 19px;
+    }
+  }
+  span{
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 88px;
+    color: #4d4d4d;
+    font-size: 24px;
+  }
+}
+.my_skills{
+  padding-bottom: 126px;
+  h2 {
+    color: #4d4d4d;
+    font-size: 46px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    padding-top: 140px;
+    padding-bottom: 64px;
+
+    &:before {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #7a7a7a;
+      display: block;
+      margin: auto;
+      margin-bottom: 19px;
+    }
+  }
+  img{
+    width: 100%;
+  }
+}
+.portfolio{
+  background-color: #f6f6f6;
+  overflow: hidden;
+  img{
+    margin-bottom: 30px;
+    cursor: pointer;
+    transition: 0.5s;
+    &:hover{
+      -webkit-box-shadow: 2px 2px 20px 5px #4d4d4d;
+      box-shadow: 2px 2px 20px 5px #4d4d4d;
+    }
+  }
+  h2 {
+    color: #4d4d4d;
+    font-size: 46px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    padding-top: 140px;
+    padding-bottom: 45px;
+
+    &:before {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #7a7a7a;
+      display: block;
+      margin: auto;
+      margin-bottom: 19px;
+    }
+  }
+ /* #box{
+    margin:auto;
+    overflow:hidden;
+  }
+
+  .slider {
+    transition:all 2s ease-in-out;
+    height:0px;
+  }
+  .slider.open {
+    height:400px;
+  }
+  button{
+    text-transform: uppercase;
+    color: #4d4d4d;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    width: 190px;
+    line-height: 50px;
+    cursor: pointer;
+    transition: 0.5s;
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+    padding: 0 47px;
+    background-color: #FFFFFF;
+    border: none;
+    border-width: 0;
+    border-style: none;
+    border-image: none;
+    outline: none;
+    &:hover{
+      background-color: #FFFFFF;
+      -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
+      box-shadow: 0 0 5px 1px #4d4d4d;
+    }
+
+  }*/
+}
