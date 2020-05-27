@@ -24,7 +24,13 @@ header {
   background-size: cover;
   background-position: center;
   height: 100%;
-  padding-bottom: 300px; }
+  padding-bottom: 300px;
+  /* @include max-screen(767px){
+     background-image: url("../images/bg_adaptiv_03.png");
+   }*/ }
+  @media screen and (max-width: 414px) {
+    header {
+      padding-bottom: 100px; } }
   header .navbar-default {
     border-color: transparent;
     box-shadow: none;
@@ -33,16 +39,59 @@ header {
     border-radius: 0;
     background-color: transparent; }
     header .navbar-default .navbar-collapse {
-      border-color: transparent; }
+      border-color: transparent;
+      animation: navbar-collapse 3s;
+      position: absolute;
+      top: 0;
+      right: 5rem; }
+@keyframes navbar-collapse {
+  0% {
+    position: absolute;
+    top: -300px;
+    right: 0rem; }
+  100% {
+    top: 0;
+    right: 5rem; } }
+      @media screen and (max-width: 767px) {
+        header .navbar-default .navbar-collapse {
+          position: relative;
+          top: initial;
+          right: 0;
+          animation: none; }
+        @keyframes navbar-collapse {
+          0% {
+            position: absolute;
+            top: 0px; }
+          100% {
+            top: 0; } } }
     header .navbar-default .navbar-brand {
-      padding-top: 30px; }
+      padding-top: 30px;
+      animation: navbar-brand 3s;
+      position: absolute;
+      top: 0;
+      left: 5rem; }
+@keyframes navbar-brand {
+  0% {
+    position: absolute;
+    top: -300px;
+    left: 0rem; }
+  100% {
+    top: 0;
+    left: 5rem; } }
+  header .navbar-toggle {
+    margin: 25px 55px 0 0;
+    border: none; }
   header h1 {
     padding-top: 140px;
     padding-bottom: 22px;
     font-size: 77px;
     color: #4d4d4d;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     margin: 0; }
+    @media screen and (max-width: 991px) {
+      header h1 {
+        font-size: 55px;
+        padding-top: 100px; } }
   header .navbar-nav > li {
     padding: 30px 0;
     position: relative; }
@@ -60,7 +109,7 @@ header {
         display: block;
         width: 0;
         height: 3px;
-        background-color: #878787;
+        background-color: #7a7a7a;
         position: absolute;
         bottom: -10px;
         transition: 0.5s; }
@@ -84,11 +133,11 @@ header {
     border: 1px solid #4d4d4d;
     cursor: pointer;
     transition: 0.5s;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 500;
-    margin: 0 10px 0 0; }
+    margin: 0 10px 10px 0; }
     header .row a:hover {
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       border: 1px solid #ffffff;
       -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
       box-shadow: 0 0 5px 1px #4d4d4d; }
@@ -96,16 +145,22 @@ header {
 .section_about {
   padding-top: 100px;
   padding-bottom: 100px; }
+  @media screen and (max-width: 414px) {
+    .section_about {
+      padding-top: 50px; } }
   .section_about h2 {
     color: #4d4d4d;
     font-size: 46px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 600;
     padding-top: 50px;
     margin: 0; }
-    @media screen and (max-width: 1024px) {
+    @media screen and (max-width: 1170px) {
       .section_about h2 {
         padding-top: 10px; } }
+    @media screen and (max-width: 992px) {
+      .section_about h2 {
+        font-size: 40px; } }
     .section_about h2:before {
       content: "";
       width: 60px;
@@ -118,6 +173,10 @@ header {
     font-size: 16px;
     line-height: 25px;
     padding-bottom: 30px; }
+    @media screen and (max-width: 992px) {
+      .section_about p {
+        font-size: 14px;
+        margin: 0; } }
   .section_about a {
     text-decoration: none;
     color: #4d4d4d;
@@ -130,27 +189,31 @@ header {
     border: 1px solid #4d4d4d;
     cursor: pointer;
     transition: 0.5s;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 500;
     padding: 0 47px;
-    margin-bottom: 20px; }
+    margin-bottom: 30px; }
     .section_about a:hover {
-      background-color: #FFFFFF;
-      border: 1px solid #FFFFFF;
+      background-color: #ffffff;
+      border: 1px solid #ffffff;
       -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
       box-shadow: 0 0 5px 1px #4d4d4d; }
   .section_about img {
     width: 100%; }
 
 .service {
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  overflow: hidden; }
   .service h2 {
     color: #4d4d4d;
-    font-size: 46px;
-    font-family: 'Asap', sans-serif;
+    font-size: 16px;
+    font-family: "Asap", sans-serif;
     font-weight: 600;
     padding-top: 140px;
     padding-bottom: 64px; }
+    @media screen and (max-width: 414px) {
+      .service h2 {
+        padding-top: 50px; } }
     .service h2:before {
       content: "";
       width: 60px;
@@ -171,10 +234,13 @@ header {
   .my_skills h2 {
     color: #4d4d4d;
     font-size: 46px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 600;
     padding-top: 110px;
     padding-bottom: 64px; }
+    @media screen and (max-width: 414px) {
+      .my_skills h2 {
+        padding-top: 50px; } }
     .my_skills h2:before {
       content: "";
       width: 60px;
@@ -201,10 +267,13 @@ header {
   .portfolio h2 {
     color: #4d4d4d;
     font-size: 46px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 600;
     padding-top: 100px;
     padding-bottom: 45px; }
+    @media screen and (max-width: 991px) {
+      .portfolio h2 {
+        padding: 50px; } }
     .portfolio h2:before {
       content: "";
       width: 60px;
@@ -224,6 +293,12 @@ header {
     @media screen and (max-width: 1024px) {
       .portfolio .slider.open {
         height: 300px; } }
+    @media screen and (max-width: 767px) {
+      .portfolio .slider.open {
+        height: 650px; } }
+    @media screen and (max-width: 414px) {
+      .portfolio .slider.open {
+        height: 350px; } }
   .portfolio button {
     text-transform: uppercase;
     color: #4d4d4d;
@@ -237,27 +312,33 @@ header {
     font-family: 'Asap', sans-serif;
     font-weight: 500;
     padding: 0 47px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border: none;
     border-width: 0;
     border-style: none;
     border-image: none;
     outline: none; }
     .portfolio button:hover {
-      background-color: #FFFFFF;
+      background-color: #ffffff;
       -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
       box-shadow: 0 0 5px 1px #4d4d4d; }
+  @media screen and (max-width: 767px) {
+    .portfolio .hide_portfolio {
+      display: none; } }
 
 .testimonials {
   padding-bottom: 120px; }
   .testimonials h2 {
     color: #4d4d4d;
     font-size: 46px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 600;
     padding-top: 140px;
     padding-bottom: 58px;
     margin: 0; }
+    @media screen and (max-width: 414px) {
+      .testimonials h2 {
+        padding-top: 50px; } }
     .testimonials h2:before {
       content: "";
       width: 60px;
@@ -272,6 +353,9 @@ header {
     text-align: center;
     padding-top: 50px;
     padding-bottom: 60px; }
+    @media screen and (max-width: 414px) {
+      .testimonials .owl-dots {
+        padding-top: 0; } }
   .testimonials .owl-dots .owl-dot span {
     width: 13px;
     height: 13px;
@@ -285,9 +369,17 @@ header {
     display: flex;
     align-items: center;
     padding-top: 80px; }
+    @media screen and (max-width: 414px) {
+      .testimonials .testimonials_flex {
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 40px; } }
     .testimonials .testimonials_flex .testimonials_photo {
       display: flex;
       margin-right: 33px; }
+      @media screen and (max-width: 414px) {
+        .testimonials .testimonials_flex .testimonials_photo {
+          margin: 0; } }
       .testimonials .testimonials_flex .testimonials_photo img {
         width: 160px;
         height: 160px; }
@@ -296,13 +388,13 @@ header {
       .testimonials .testimonials_flex .testimonials_item h4 {
         color: #212121;
         font-size: 30px;
-        font-family: 'Asap', sans-serif;
+        font-family: "Asap", sans-serif;
         font-weight: 500;
         margin: 0; }
       .testimonials .testimonials_flex .testimonials_item span {
         color: #212121;
         font-size: 21px;
-        font-family: 'Asap', sans-serif;
+        font-family: "Asap", sans-serif;
         font-weight: 500;
         font-style: italic;
         padding-bottom: 22px;
@@ -310,26 +402,27 @@ header {
       .testimonials .testimonials_flex .testimonials_item p {
         color: #212121;
         font-size: 16px;
-        font-family: 'Asap', sans-serif;
+        font-family: "Asap", sans-serif;
         font-weight: 400;
         line-height: 26px; }
 
 .result {
   background-color: #f6f6f6;
   padding-top: 70px;
-  padding-bottom: 60px; }
+  padding-bottom: 60px;
+  overflow: hidden; }
   .result span {
     display: block;
     padding-top: 31px;
     padding-bottom: 15px;
     font-size: 30px;
     color: #212121;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 500; }
   .result p {
     color: #212121;
     font-size: 22px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 400; }
 
 footer {
@@ -337,11 +430,13 @@ footer {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  overflow: hidden;
+  position: relative; }
   footer h2 {
     color: #f3f3f3;
     font-size: 46px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 600;
     padding-top: 160px;
     padding-bottom: 70px;
@@ -361,7 +456,7 @@ footer {
     margin-bottom: 30px;
     color: #212121;
     font-size: 16px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 500; }
   footer textarea.form-control {
     resize: none;
@@ -369,7 +464,7 @@ footer {
     display: block; }
   footer .btn {
     line-height: 50px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     background-image: none;
     text-align: center;
     color: #4d4d4d;
@@ -379,7 +474,7 @@ footer {
     padding: 0px 32px;
     width: 123px;
     border-radius: initial;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 500; }
     footer .btn:hover:hover {
       -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
@@ -388,35 +483,51 @@ footer {
     margin: 0 5px;
     display: inline-block;
     width: 27px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     text-align: center;
     line-height: 27px;
     transition: 0.5s;
     color: #4d4d4d;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 500; }
     footer .icon a:hover {
       background-color: #385694;
-      color: #FFFFFF; }
+      color: #ffffff; }
       footer .icon a:hover:nth-child(2) {
-        background-color: #0084b4;
-        color: #FFFFFF; }
+        background-color: #0084b4; }
       footer .icon a:hover:nth-child(3) {
-        background-color: #0074af;
-        color: #FFFFFF; }
+        background-color: #0074af; }
       footer .icon a:hover:nth-child(4) {
-        background-color: #e44c41;
-        color: #FFFFFF; }
+        background-color: #e44c41; }
       footer .icon a:hover:nth-child(5) {
-        background-color: #0054f8;
-        color: #FFFFFF; }
+        background-color: #0054f8; }
       footer .icon a:hover:nth-child(6) {
-        background-color: #e44a85;
-        color: #FFFFFF; }
+        background-color: #e44a85; }
   footer p {
-    color: #FFFFFF;
+    color: #ffffff;
     font-size: 16px;
-    font-family: 'Asap', sans-serif;
+    font-family: "Asap", sans-serif;
     font-weight: 400; }
+    @media screen and (max-width: 991px) {
+      footer p {
+        padding-top: 10px; } }
+
+.arrow_up {
+  display: flex;
+  position: absolute;
+  top: 650px;
+  right: 30px; }
+  @media screen and (max-width: 767px) {
+    .arrow_up {
+      top: 710px; } }
+  .arrow_up a {
+    display: flex;
+    height: 45px;
+    width: 45px;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #4d4d4d;
+    text-decoration: none; }
 
 /*# sourceMappingURL=style.css.map */
