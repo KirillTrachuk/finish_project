@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;1,400&display=swap";
 @import "https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&display=swap";
 @import "../fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.css";
 @import "https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css";
@@ -46,26 +46,32 @@ $font_size_span: 21px;
   }
 }
 
-header{
+header {
   background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  width: 100%;
   height: 100%;
   padding-bottom: 300px;
-  .navbar-default{
+
+  .navbar-default {
     border-color: transparent;
     box-shadow: none;
     border: none;
     background-image: none;
     border-radius: 0;
     background-color: transparent;
-    .navbar-brand{
+
+    .navbar-collapse {
+      border-color: transparent;
+    }
+
+    .navbar-brand {
       padding-top: 30px;
     }
   }
-  h1{
+
+  h1 {
     padding-top: 140px;
     padding-bottom: 22px;
     font-size: 77px;
@@ -73,19 +79,22 @@ header{
     font-family: 'Asap', sans-serif;
     margin: 0;
   }
-  .navbar-nav>li {
+
+  .navbar-nav > li {
     padding: 30px 0;
     position: relative;
-    @include max-screen(767px){
-      padding: 15px 0px;
+    @include max-screen(767px) {
+      padding: 25px 0px;
     }
-    a{
+
+    a {
       color: #4d4d4d;
       font-size: 16px;
       position: relative;
       margin: 10px 15px;
       padding: 0;
-      &:after{
+
+      &:after {
         content: "";
         display: block;
         width: 0;
@@ -96,19 +105,22 @@ header{
         transition: 0.5s;
       }
     }
-    &:hover a:after{
+
+    &:hover a:after {
       width: 100%;
     }
   }
-  h2{
+
+  h2 {
     padding-bottom: 50px;
     font-size: 22px;
     font-family: 'Asap', sans-serif;
     color: #4d4d4d;
     margin: 0;
   }
-  .row{
-    a{
+
+  .row {
+    a {
       text-decoration: none;
       color: #4d4d4d;
       font-size: 16px;
@@ -122,26 +134,38 @@ header{
       transition: 0.5s;
       font-family: 'Asap', sans-serif;
       font-weight: 500;
-      margin: 0 20px 0 0;
-      &:hover{
+      margin: 0 10px 0 0;
+
+      &:hover {
         background-color: #FFFFFF;
-        border: transparent;
+        border: 1px solid #ffffff;
         -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
         box-shadow: 0 0 5px 1px #4d4d4d;
       }
     }
   }
 }
-.section_about{
-  padding-top: 110px;
-  padding-bottom: 120px;
-  h2{
+
+.section_about {
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+  h2 {
     color: #4d4d4d;
     font-size: 46px;
     font-family: 'Asap', sans-serif;
     font-weight: 600;
     padding-top: 50px;
-    &:before{
+    margin: 0;
+    @include max-screen(1024px){
+      padding-top: 10px;
+    }
+    @include max-screen(992px){
+
+    }
+
+
+    &:before {
       content: "";
       width: 60px;
       height: 4px;
@@ -150,13 +174,15 @@ header{
       margin-bottom: 19px;
     }
   }
-  p{
+
+  p {
     color: #4d4d4d;
     font-size: 16px;
     line-height: 25px;
-    padding-bottom: 40px;
+    padding-bottom: 30px;
   }
-  a{
+
+  a {
     text-decoration: none;
     color: #4d4d4d;
     font-size: 16px;
@@ -171,17 +197,21 @@ header{
     font-family: 'Asap', sans-serif;
     font-weight: 500;
     padding: 0 47px;
-    &:hover{
+    margin-bottom: 20px;
+
+    &:hover {
       background-color: #FFFFFF;
-      border: transparent;
+      border: 1px solid #FFFFFF;
       -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
       box-shadow: 0 0 5px 1px #4d4d4d;
     }
   }
-  img{
+
+  img {
     width: 100%;
   }
 }
+
 .service {
   background-color: #f6f6f6;
 
@@ -203,7 +233,8 @@ header{
       margin-bottom: 19px;
     }
   }
-  span{
+
+  span {
     display: block;
     padding-top: 15px;
     padding-bottom: 88px;
@@ -211,14 +242,15 @@ header{
     font-size: 24px;
   }
 }
-.my_skills{
-  padding-bottom: 126px;
+
+.my_skills {
+    padding-bottom: 125px;
   h2 {
     color: #4d4d4d;
     font-size: 46px;
     font-family: 'Asap', sans-serif;
     font-weight: 600;
-    padding-top: 140px;
+    padding-top: 110px;
     padding-bottom: 64px;
 
     &:before {
@@ -231,28 +263,35 @@ header{
       margin-bottom: 19px;
     }
   }
-  img{
+
+  img {
     width: 100%;
   }
 }
-.portfolio{
+
+.portfolio {
   background-color: #f6f6f6;
   overflow: hidden;
-  img{
+  padding-bottom: 120px;
+
+  img {
     margin-bottom: 30px;
     cursor: pointer;
     transition: 0.5s;
-    &:hover{
+    width: 100%;
+
+    &:hover {
       -webkit-box-shadow: 2px 2px 20px 5px #4d4d4d;
       box-shadow: 2px 2px 20px 5px #4d4d4d;
     }
   }
+
   h2 {
     color: #4d4d4d;
     font-size: 46px;
     font-family: 'Asap', sans-serif;
     font-weight: 600;
-    padding-top: 140px;
+    padding-top: 100px;
     padding-bottom: 45px;
 
     &:before {
@@ -265,19 +304,25 @@ header{
       margin-bottom: 19px;
     }
   }
- /* #box{
-    margin:auto;
-    overflow:hidden;
+
+  #box {
+    margin: auto;
+    overflow: hidden;
   }
 
   .slider {
-    transition:all 2s ease-in-out;
-    height:0px;
+    transition: all 2s ease-in-out;
+    height: 0px;
   }
+
   .slider.open {
-    height:400px;
+    height: 400px;
+    @include max-screen(1024px){
+      height: 300px;
+    }
   }
-  button{
+
+  button {
     text-transform: uppercase;
     color: #4d4d4d;
     font-size: 16px;
@@ -296,11 +341,248 @@ header{
     border-style: none;
     border-image: none;
     outline: none;
-    &:hover{
+
+    &:hover {
       background-color: #FFFFFF;
       -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
       box-shadow: 0 0 5px 1px #4d4d4d;
     }
 
-  }*/
+  }
+}
+
+.testimonials {
+  padding-bottom: 120px;
+
+  h2 {
+    color: #4d4d4d;
+    font-size: 46px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    padding-top: 140px;
+    padding-bottom: 58px;
+    margin: 0;
+
+    &:before {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #7a7a7a;
+      display: block;
+      margin: auto;
+      margin-bottom: 19px;
+    }
+  }
+
+  .carousel_wraper {
+    border: 2px solid grey;
+  }
+
+  .owl-dots {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 60px;
+  }
+
+  .owl-dots .owl-dot span {
+    width: 13px;
+    height: 13px;
+    background-color: #ffffff;
+    border: 1px solid #212121;
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .owl-dots .owl-dot.active span {
+    background-color: #212121;
+  }
+
+  .testimonials_flex {
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+
+    .testimonials_photo {
+      display: flex;
+      margin-right: 33px;
+
+      img {
+        width: 160px;
+        height: 160px;
+      }
+    }
+
+    .testimonials_item {
+      display: inline-block;
+
+      h4 {
+        color: #212121;
+        font-size: 30px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 500;
+        margin: 0;
+      }
+
+      span {
+        color: #212121;
+        font-size: 21px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 500;
+        font-style: italic;
+        padding-bottom: 22px;
+        display: inline-block;
+      }
+
+      p {
+        color: #212121;
+        font-size: 16px;
+        font-family: 'Asap', sans-serif;
+        font-weight: 400;
+        line-height: 26px;
+      }
+    }
+  }
+}
+
+.result {
+  background-color: #f6f6f6;
+  padding-top: 70px;
+  padding-bottom: 60px;
+
+  span {
+    display: block;
+    padding-top: 31px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    color: #212121;
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+  }
+
+  p {
+    color: #212121;
+    font-size: 22px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+  }
+}
+
+footer {
+  background-image: url(../images/footer_img_20.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 30px;
+
+  h2 {
+    color: #f3f3f3;
+    font-size: 46px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 600;
+    padding-top: 160px;
+    padding-bottom: 70px;
+    margin: 0;
+
+    &:before {
+      content: "";
+      width: 60px;
+      height: 4px;
+      background-color: #c1c1c1;
+      display: block;
+      margin: auto;
+      margin-bottom: 19px;
+    }
+  }
+
+  .form-control {
+    height: 57px;
+    border-radius: initial;
+    border: none;
+    margin-bottom: 30px;
+    color: #212121;
+    font-size: 16px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+  }
+
+  textarea.form-control {
+    resize: none;
+    height: 200px;
+    display: block;
+  }
+
+  .btn {
+    line-height: 50px;
+    background-color: #FFFFFF;
+    background-image: none;
+    text-align: center;
+    color: #4d4d4d;
+    font-size: 16px;
+    border: none;
+    transition: 0.5s;
+    padding: 0px 32px;
+    width: 123px;
+    border-radius: initial;
+    font-family: 'Asap', sans-serif;
+    font-weight: 500;
+
+    &:hover {
+      &:hover {
+        -webkit-box-shadow: 0 0 5px 1px #4d4d4d;
+        box-shadow: 0 0 5px 1px #4d4d4d;
+      }
+    }
+  }
+
+  .icon {
+    a {
+      margin: 0 5px;
+      display: inline-block;
+      width: 27px;
+      background-color: #FFFFFF;
+      text-align: center;
+      line-height: 27px;
+      transition: 0.5s;
+      color: #4d4d4d;
+      font-family: 'Asap', sans-serif;
+      font-weight: 500;
+
+      &:hover {
+        background-color: #385694;
+        color: #FFFFFF;
+
+        &:nth-child(2) {
+          background-color: #0084b4;
+          color: #FFFFFF;
+        }
+
+        &:nth-child(3) {
+          background-color: #0074af;
+          color: #FFFFFF;
+        }
+
+        &:nth-child(4) {
+          background-color: #e44c41;
+          color: #FFFFFF;
+        }
+
+        &:nth-child(5) {
+          background-color: #0054f8;
+          color: #FFFFFF;
+        }
+
+        &:nth-child(6) {
+          background-color: #e44a85;
+          color: #FFFFFF;
+        }
+      }
+    }
+  }
+
+  p {
+    color: #FFFFFF;
+    font-size: 16px;
+    font-family: 'Asap', sans-serif;
+    font-weight: 400;
+  }
 }
